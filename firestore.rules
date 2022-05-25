@@ -12,7 +12,7 @@ service cloud.firestore {
       }
 
       function isSenderBalanceUpdate() {
-        // TODO: Validate balances using tx doc.
+        // TODO: Validate balances using tx doc and correctly identify dup txs.
         let txId = request.resource.data.lastTxId;
         let tx = /databases/$(database)/documents/transactions/$(txId);
         return request.auth != null
@@ -22,7 +22,7 @@ service cloud.firestore {
       }
 
       function isRecipientBalanceUpdate() {
-        // TODO: Validate balances using tx doc.
+        // TODO: Validate balances using tx doc and correctly identify dup txs.
         let txId = request.resource.data.lastTxId;
         let tx = /databases/$(database)/documents/transactions/$(txId);
         return request.auth != null
