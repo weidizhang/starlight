@@ -1,16 +1,58 @@
-# starlight_credits
+# Starlight
 
-A new Flutter project.
+## About
 
-## Getting Started
+This app created in Flutter is a proof-of-concept demonstrating how Cloud
+Firestore can be used to create a payment transactions application.
 
-This project is a starting point for a Flutter application.
+Firebase is for authentication, and Firestore watch listeners (snapshot
+listeners) are used to listen for updates to the relevant user document
+as well as transaction documents to facilitate live UI updates.
 
-A few resources to get you started if this is your first Flutter project:
+## Data Schema
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### `users` collection
+- `balanceCents`: number (int)
+- `email`: string
+- `lastTxId`: string
+- `uid`: string (Firebase auth uid)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### `transactions` collection
+- `amountCents`: number (int)
+- `fromUid`: string (Firebase auth uid)
+- `fromUsername`: string
+- `timestamp`: timestamp
+- `toUid`: string (Firebase auth uid)
+- `toUsername`: string
+
+### Notes
+The `users` collection and `transactions` collection are interdependent
+for committing balance transfers.
+
+## Technologies Used
+
+- Flutter
+- Dart
+- Firebase SDK
+- Cloud Firestore SDK
+
+## Screenshots
+
+**Home:**
+![Home Screenshot](doc/screenshots/home.png)
+
+**Transactions:**
+
+![Receiving Transaction Screenshot](docs/screenshots/tx.png)
+
+**Send Funds:**
+![Send Funds Screenshot](docs/screenshots/send_funds.png)
+
+**Profile:**
+
+![Profile Screenshot](docs/screenshots/profile.png)
+
+**Register:**
+
+![Register Screenshot](docs/screenshots/register.png)
+
