@@ -38,21 +38,22 @@ for committing balance transfers.
 
 ## Screenshots
 
-**Home:**
-![Home Screenshot](doc/screenshots/home.png)
+### Home
 
-**Transactions:**
+<img src="doc/screenshots/home.png" width="35%">
 
-![Receiving Transaction Screenshot](docs/screenshots/tx.png)
+### Transactions
 
-**Send Funds:**
-![Send Funds Screenshot](docs/screenshots/send_funds.png)
+<img src="doc/screenshots/tx.png" width="35%">
 
-**Profile:**
+### Send Funds
 
-![Profile Screenshot](docs/screenshots/profile.png)
+<img src="doc/screenshots/send_funds.png" width="35%">
 
-**Register:**
+### Profile
 
-![Register Screenshot](docs/screenshots/register.png)
+<img src="doc/screenshots/profile.png" width="35%">
 
+### Register
+
+<img src="doc/screenshots/register.png" width="35%">
